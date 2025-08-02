@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticker Background Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }
+        input[type="submit"] { background-color: black; color: white; padding: 10px; border: none; }
+    </style>
+</head>
+<body>
+    <h2>Add Black Background for Sticker</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Image (PNG with transparency):</label>
+        <input type="file" name="image" accept="image/png" required>
+
+        <label>Border Thickness (px):</label>
+        <input type="number" name="border" value="50" min="0" required>
+
+        <input type="submit" value="Generate Sticker">
+    </form>
+</body>
+</html>
